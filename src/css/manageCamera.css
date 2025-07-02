@@ -63,7 +63,7 @@
 }
 .cameraListWrapperContainer .cameraTableContainer .head .select {
   display: flex;
-  gap: 0.5remrem;
+  gap: 0.5rem;
   padding: 0.5rem 0.6rem;
   border: 1px solid var(--darkBorderColor);
   border-radius: 0.3rem;
@@ -79,4 +79,24 @@
   color: var(--textBodyColor);
   outline: none;
   border: none;
+}
+
+@media screen and (max-width: 720px) {
+  .manageCameraContainer {
+    --containerPadding: 1.4rem;
+    --inputMinWidth: 14rem;
+    --searchInputPadding: 1rem;
+  }
+
+  .cameraListHeader {
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+  }
+  .cameraListHeader .title h3 {
+    margin-bottom: 0 !important;
+  }
+  .cameraListHeader .searchInp {
+    align-self: flex-end;
+  }
 }

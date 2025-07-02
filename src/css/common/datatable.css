@@ -42,8 +42,8 @@
   /* overflow: auto; */
 }
 .dataTableContainer .tablePagination button {
-  padding: .3rem;
-  border-radius: .2rem;
+  padding: 0.3rem;
+  border-radius: 0.2rem;
   cursor: pointer;
 }
 .dataTableContainer .tablePagination button:hover:not(:disabled) {
@@ -52,6 +52,12 @@
 .dataTableContainer .tablePagination button:disabled {
   opacity: 0.75;
   cursor: default;
+}
+
+/* Quick Fix for responsiveness */
+.tableHeadCells,
+.tableRowsCell {
+  width: 100% !important;
 }
 
 @media (max-width: 1070px) {
@@ -77,5 +83,15 @@
   }
   .dataTableContainer {
     max-width: 100%;
+  }
+}
+@media screen and (max-width: 720px) {
+  .tableHeadCells,
+  .tableRowsCell {
+    width: max-content !important;
+  }
+  .tablePagination {
+    position: sticky;
+    left: 1rem;
   }
 }

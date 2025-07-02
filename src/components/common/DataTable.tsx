@@ -145,7 +145,6 @@ function DataTable<T>(props: DataTablePropsType<T>) {
       };
     });
   };
-  console.log(paginationOptions);
   // Function for change per page options
   const handlePerPageChange = (value: number) => {
     const { pageNumber, totalItems } = paginationOptions;
