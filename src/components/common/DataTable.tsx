@@ -407,8 +407,8 @@ function DataTable<T>(props: DataTablePropsType<T>) {
             <div className="flex gap-3">
               <select
                 value={paginationOptions.perPage}
-                onChange={(page) => {
-                  if (typeof page === "number") handlePerPageChange(page);
+                onChange={(e) => {
+                  handlePerPageChange(+e.target.value);
                 }}
               >
                 {(defaultPerPageOptions ?? [5, 10, 20, 30, 40, 50]).map(
