@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Inter", sans-serif; /* Default font for every text*/
+}
+
+:root {
+  /* Variables for Colors */
+  --backgroundWhiteColor: #f9f9f9;
+  --pureWhiteColor: #ffffff;
+  --grayWhiteColor: #f0f0f0;
+
+  --textColor: #212121;
+  --textBodyColor: #545454;
+  --textHeadColor: #7e7e7e;
+  --textDisabled: #a0a0a0;
+
+  --darkBorderColor: #ced4da;
+  --lightBorderColor: #a0a0a0;
+
+  --textGreenBg: #0292621a;
+  --textGreen: #029262;
+
+  --greenColor: #029262;
+  --orangeColor: #ff7e17;
+  --redColor: #dc3545;
+
+  /* Variable for Font Sizes */
+  --fs10: 1rem;
+  --fs12: 1.2rem;
+  --fs14: 1.4rem;
+  --fs16: 1.6rem;
+  --fs18: 1.8rem;
+  --fs20: 2rem;
+  --fs22: 2.2rem;
+  --fs26: 2.6rem;
+  --fs30: 3rem;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%; /* 1rem = 10px*/
+  background: var(--primaryBackgroundColor);
+  color: var(--primaryTextColor);
+  letter-spacing: 0.4px;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

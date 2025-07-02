@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+.dataTableContainer {
+  --backgroundColor: var(--whiteColor);
+
+  --tableWrapperRadius: 0;
+  --tableWrapperBorder: 1px solid #ececec;
+  --tableWrapperPadding: 1.2rem;
+
+  --tableHeadPadding: 1rem 1.5rem;
+  --tableHeadColor: #818d90;
+  --tableHeadHeight: max-content;
+
+  --tableRowBg: var(--whiteColor);
+  --tableRowPadding: 0.8rem 1.5rem;
+  --tableRowBorder: 1px solid #d4d4da;
+  --tableRowHeight: 4rem;
+  --tableRowHightlightColor: #0000000f;
+  --tableRowStripedColor: #0000000a;
+  --tablePaginationPadding: 1.5rem 1.2rem;
+}
+.dataTableContainer .tableHeadCells * {
+  font-size: var(--fs12);
+  color: var(--textHeadColor);
+  font-weight: 450;
+}
+.dataTableContainer .tableRowsCell *,
+.dataTableContainer .tablePagination * {
+  font-size: var(--fs10);
+  color: var(--textBodyColor);
+}
+.dataTableContainer .overflowStyle {
+  width: "100vw";
+  overflow: auto;
+}
+
+.dataTableContainer .tableRow.highlight:hover {
+  background: var(--tableRowHightlightColor) !important;
+}
+.dataTableContainer .tableRowsCell {
+  max-height: calc(var(--mainContentMaxHeight) * 0.74);
+  /* overflow: auto; */
+}
+.dataTableContainer .tablePagination button {
+  padding: .3rem;
+  border-radius: .2rem;
+  cursor: pointer;
+}
+.dataTableContainer .tablePagination button:hover:not(:disabled) {
+  background-color: var(--grayWhiteColor);
+}
+.dataTableContainer .tablePagination button:disabled {
+  opacity: 0.75;
+  cursor: default;
+}
+
+@media (max-width: 1070px) {
+  .dataTableContainer {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 790px) {
+  .dataTableContainer {
+    --tableWrapperRadius: 0;
+    --tableWrapperPadding: 0.6rem;
+
+    --tableHeadPadding: 0.6rem 1.2rem;
+    --tableHeadHeight: max-content;
+
+    --tableRowPadding: 0.6rem 1.2rem;
+    --tableRowHeight: 4rem;
+    --tablePaginationPadding: 1rem;
+  }
+  .dataTableContainer .tablePagination {
+    padding-bottom: 0 !important;
+  }
+  .dataTableContainer {
+    max-width: 100%;
+  }
+}

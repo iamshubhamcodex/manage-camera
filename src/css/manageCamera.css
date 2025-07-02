@@ -1,0 +1,82 @@
+.mainLogo {
+  margin-inline: auto;
+  width: 14rem;
+}
+.manageCameraContainer {
+  --containerPadding: 2rem;
+  --inputMinWidth: 20rem;
+  --searchInputPadding: 1rem;
+
+  height: 100dvh;
+  overflow: auto;
+  background-color: var(--backgroundWhiteColor);
+  padding-block: var(--containerPadding);
+}
+.cameraListWrapperContainer {
+  --wrapperGap: 2rem;
+
+  gap: var(--wrapperGap);
+}
+.cameraListWrapperContainer .cameraListHeader {
+  padding-inline: var(--containerPadding);
+}
+.cameraListWrapperContainer .cameraListHeader .title h3 {
+  font-size: var(--fs20);
+  font-weight: 500;
+  color: var(--textColor);
+  margin-bottom: 5px;
+}
+.cameraListWrapperContainer .cameraListHeader .title p {
+  font-size: var(--fs12);
+  color: var(--textBodyColor);
+}
+.cameraListWrapperContainer .cameraListHeader .searchInp {
+  padding: var(--searchInputPadding);
+  background: var(--grayWhiteColor);
+  border-radius: 0.6rem;
+  min-width: var(--inputMinWidth);
+}
+.cameraListWrapperContainer .cameraListHeader .searchInp {
+  padding: var(--searchInputPadding);
+  background: var(--grayWhiteColor);
+  border-radius: 0.6rem;
+  min-width: var(--inputMinWidth);
+}
+.cameraListWrapperContainer .cameraListHeader .searchInp:has(input:focus) {
+  box-shadow: 5px 5px 10px -7px grey;
+}
+.cameraListWrapperContainer .cameraListHeader .searchInp input {
+  flex-grow: 1;
+  outline: none;
+  border: none;
+  color: var(--textBodyColor);
+}
+.cameraListWrapperContainer .cameraTableContainer {
+  margin-inline: var(--containerPadding);
+  background: var(--pureWhiteColor);
+  border-radius: 0.2rem;
+}
+.cameraListWrapperContainer .cameraTableContainer .head {
+  padding: 0.4rem 0.8rem;
+  gap: 1rem;
+  border-bottom: 2px solid var(--backgroundWhiteColor);
+}
+.cameraListWrapperContainer .cameraTableContainer .head .select {
+  display: flex;
+  gap: 0.5remrem;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid var(--darkBorderColor);
+  border-radius: 0.3rem;
+  width: 16rem;
+}
+.cameraListWrapperContainer .cameraTableContainer .head .select svg {
+  min-width: 1.5rem;
+}
+.cameraListWrapperContainer .cameraTableContainer .head .select select {
+  flex-grow: 1;
+  min-width: unset;
+  font-family: var(--fs12);
+  color: var(--textBodyColor);
+  outline: none;
+  border: none;
+}
