@@ -153,6 +153,14 @@ function DataTable<T>(props: DataTablePropsType<T>) {
       ...prev,
       perPage: value,
       pageNumber: Math.min(totalPages, pageNumber),
+      totalPages: Math.ceil(
+        data.length /
+          (pagination
+            ? defaultPerPage ?? defaultPerPageOptions
+              ? defaultPerPageOptions?.[0] ?? 5
+              : 10
+            : data.length)
+      ),
     }));
   };
   // Function for change page
