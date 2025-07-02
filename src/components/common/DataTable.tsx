@@ -145,22 +145,16 @@ function DataTable<T>(props: DataTablePropsType<T>) {
       };
     });
   };
+  console.log(paginationOptions);
   // Function for change per page options
   const handlePerPageChange = (value: number) => {
-    const { perPage, pageNumber, totalItems } = paginationOptions;
-    const totalPages = Math.ceil(totalItems / perPage);
+    const { pageNumber, totalItems } = paginationOptions;
+    const totalPages = Math.ceil(totalItems / value);
     setPaginationOptions((prev) => ({
       ...prev,
       perPage: value,
       pageNumber: Math.min(totalPages, pageNumber),
-      totalPages: Math.ceil(
-        data.length /
-          (pagination
-            ? defaultPerPage ?? defaultPerPageOptions
-              ? defaultPerPageOptions?.[0] ?? 5
-              : 10
-            : data.length)
-      ),
+      totalPages: Math.ceil(totalItems / value),
     }));
   };
   // Function for change page
